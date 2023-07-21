@@ -13,7 +13,7 @@ def decode_char(morse_char)
 end
 
 def decode_word(morse_word)
-  morse_word.split(' ').map { |morse_char| decode_char(morse_char) }.join('')
+  morse_word.split.map { |morse_char| decode_char(morse_char) }.join
 end
 
 def decode_message(morse_message)
@@ -21,6 +21,6 @@ def decode_message(morse_message)
 end
 
 # Test with the given Morse code message
-morse_code_message = ".-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ..."
+morse_code_message = '.-   -... --- -..-   ..-. ..- .-.. .-..   --- ..-.   .-. ..- -... .. . ...'
 decoded_message = decode_message(morse_code_message)
 puts decoded_message
